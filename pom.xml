@@ -11,6 +11,7 @@
         <module>yrpc-client</module>
         <module>yrpc-server</module>
         <module>yrpc-common</module>
+        <module>yrpc-admin</module>
     </modules>
     <name>yrpc</name>
 
