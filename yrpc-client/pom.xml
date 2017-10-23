@@ -11,5 +11,15 @@
 
     <artifactId>yrpc-client</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.yuanwhy.yrpc</groupId>
+            <artifactId>yrpc-registry-api</artifactId>
+        </dependency>
 
+        <dependency>
+            <groupId>com.yuanwhy.yrpc</groupId>
+            <artifactId>yrpc-registry-zookeeper</artifactId>
+        </dependency>
+    </dependencies>
 </project>

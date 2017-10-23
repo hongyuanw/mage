@@ -10,6 +10,24 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>yrpc-demo</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>yrpc-demo-api</module>
+        <module>yrpc-demo-client</module>
+        <module>yrpc-demo-server</module>
+    </modules>
 
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.yuanwhy.yrpc</groupId>
+                <artifactId>yrpc-demo-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
 
 </project>
