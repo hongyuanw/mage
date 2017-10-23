@@ -49,6 +49,17 @@
                 <version>${project.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.yuanwhy.yrpc</groupId>
+                <artifactId>yrpc-registry-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yuanwhy.yrpc</groupId>
+                <artifactId>yrpc-registry-zookeeper</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>junit</groupId>
