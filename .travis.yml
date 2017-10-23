@@ -2,6 +2,6 @@ language : java
 jdk:
   - oraclejdk8
   - oraclejdk9
-  - openjdk7
 install:
+  - mvn -N io.takari:maven:wrapper
   - mvn clean install
