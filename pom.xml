@@ -12,6 +12,7 @@
         <module>mage-server</module>
         <module>mage-common</module>
         <module>mage-admin</module>
+        <module>mage-rpc</module>
     </modules>
     <name>mage</name>
 
