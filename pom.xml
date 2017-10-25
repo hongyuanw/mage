@@ -1,19 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.yuanwhy.yrpc</groupId>
-    <artifactId>yrpc</artifactId>
+    <groupId>com.yuanwhy.mage</groupId>
+    <artifactId>mage</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>yrpc-demo</module>
-        <module>yrpc-registry</module>
-        <module>yrpc-client</module>
-        <module>yrpc-server</module>
-        <module>yrpc-common</module>
-        <module>yrpc-admin</module>
+        <module>mage-demo</module>
+        <module>mage-registry</module>
+        <module>mage-client</module>
+        <module>mage-server</module>
+        <module>mage-common</module>
+        <module>mage-admin</module>
     </modules>
-    <name>yrpc</name>
+    <name>mage</name>
 
     <properties>
         <java.src.version>1.8</java.src.version>
@@ -25,39 +25,39 @@
         <dependencies>
 
             <dependency>
-                <groupId>com.yuanwhy.yrpc</groupId>
-                <artifactId>yrpc-client</artifactId>
+                <groupId>com.yuanwhy.mage</groupId>
+                <artifactId>mage-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.yuanwhy.yrpc</groupId>
-                <artifactId>yrpc-common</artifactId>
+                <groupId>com.yuanwhy.mage</groupId>
+                <artifactId>mage-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
 
             <dependency>
-                <groupId>com.yuanwhy.yrpc</groupId>
-                <artifactId>yrpc-server</artifactId>
+                <groupId>com.yuanwhy.mage</groupId>
+                <artifactId>mage-server</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.yuanwhy.yrpc</groupId>
-                <artifactId>yrpc-registry</artifactId>
+                <groupId>com.yuanwhy.mage</groupId>
+                <artifactId>mage-registry</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.yuanwhy.yrpc</groupId>
-                <artifactId>yrpc-registry-api</artifactId>
+                <groupId>com.yuanwhy.mage</groupId>
+                <artifactId>mage-registry-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.yuanwhy.yrpc</groupId>
-                <artifactId>yrpc-registry-zookeeper</artifactId>
+                <groupId>com.yuanwhy.mage</groupId>
+                <artifactId>mage-registry-zookeeper</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
