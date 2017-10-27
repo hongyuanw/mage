@@ -5,3 +5,6 @@ jdk:
 install:
   - mvn -N io.takari:maven:wrapper
   - mvn clean install
+notifications:
+  email: false
+
