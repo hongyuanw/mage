@@ -13,9 +13,9 @@ public class ClientDemo {
     public static void main(String[] args) {
 
         Registry registry = new ZkRegistry();
-        YClient yClient = new YClient(registry, "demo-service", HelloService.class);
+        YClient yClient = new YClient<HelloService>(registry, "demo-service", HelloService.class);
 
-        HelloService helloService = (HelloService) yClient.getBean();
+        HelloService helloService = (HelloService) yClient.get();
 
         String result = helloService.greeting("Rpc Man");
 
