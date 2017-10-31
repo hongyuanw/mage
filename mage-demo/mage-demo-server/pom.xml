@@ -16,6 +16,10 @@
             <groupId>com.yuanwhy.mage</groupId>
             <artifactId>mage-demo-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.yuanwhy.mage</groupId>
+            <artifactId>mage-server</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

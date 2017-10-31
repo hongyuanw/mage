@@ -1,4 +1,4 @@
-package com.yuanwhy.mage.server;
+package com.yuanwhy.mage.demo.server;
 
 import com.yuanwhy.mage.demo.api.HelloService;
 

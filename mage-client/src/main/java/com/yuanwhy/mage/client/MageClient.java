@@ -1,25 +1,22 @@
-package com.yuanwhy.mage;
+package com.yuanwhy.mage.client;
 
-import com.yuanwhy.mage.registry.api.Registry;
+import com.yuanwhy.mage.registry.api.MageRegistry;
 import org.apache.commons.collections4.CollectionUtils;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
-import java.rmi.NotBoundException;
-import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
  * Created by hongyuan.wang on 23/10/2017.
  */
-public class YClient<T> {
+public class MageClient<T> {
 
-    private static Logger logger = LoggerFactory.getLogger(YClient.class);
+    private static Logger logger = LoggerFactory.getLogger(MageClient.class);
 
-    private Registry registry;
+    private MageRegistry mageRegistry;
 
     private List<Member> members = new ArrayList<>();
 
@@ -27,14 +24,14 @@ public class YClient<T> {
 
     private Class iface;
 
-    public YClient(Registry registry, String serviceName, Class iface) {
-        this.registry = registry;
+    public MageClient(MageRegistry mageRegistry, String serviceName, Class iface) {
+        this.mageRegistry = mageRegistry;
         this.serviceName = serviceName;
         this.iface = iface;
     }
 
-    public Registry getRegistry() {
-        return registry;
+    public MageRegistry getMageRegistry() {
+        return mageRegistry;
     }
 
     public String getServiceName() {
@@ -70,7 +67,7 @@ public class YClient<T> {
 
     private void init(){
 
-        // TODO: 31/10/2017 get members info from mage registry
+        // TODO: 31/10/2017 get members info from mage mageRegistry
         members.add(new Member("127.0.0.1", 1099));
     }
 }

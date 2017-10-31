@@ -1,12 +1,12 @@
 package com.yuanwhy.mage.registry.zookeeper;
 
 
-import com.yuanwhy.mage.registry.api.Registry;
+import com.yuanwhy.mage.registry.api.MageRegistry;
 
 /**
  * Created by hongyuan.wang on 23/10/2017.
  */
-public class ZkRegistry implements Registry {
+public class ZkMageRegistry implements MageRegistry {
 
     @Override
     public void start() {

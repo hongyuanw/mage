@@ -1,4 +1,4 @@
-package com.yuanwhy.mage;
+package com.yuanwhy.mage.client;
 
 /**
  * Created by hongyuan.wang on 30/10/2017.
