@@ -1,6 +1,7 @@
 package com.yuanwhy.mage.demo.server;
 
 import com.yuanwhy.mage.registry.api.MageRegistry;
+import com.yuanwhy.mage.rpc.protocol.Protocol;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,6 +27,8 @@ public class MageServer {
     private Set<Class> ifaces = new HashSet<>();
 
     private Registry rmiRegistry;
+
+    private Protocol protocol;
 
     public MageServer(MageRegistry registry, int port) {
         this.registry = registry;

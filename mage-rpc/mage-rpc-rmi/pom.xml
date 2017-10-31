@@ -11,5 +11,13 @@
 
     <artifactId>mage-rpc-rmi</artifactId>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>com.yuanwhy.mage</groupId>
+            <artifactId>mage-rpc-api</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>
