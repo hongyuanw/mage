@@ -2,10 +2,11 @@ package com.yuanwhy.mage.demo.server;
 
 import com.yuanwhy.mage.registry.api.MageRegistry;
 import com.yuanwhy.mage.rpc.protocol.Protocol;
+import com.yuanwhy.mage.rpc.rmi.RmiInvocationHandler;
+import com.yuanwhy.mage.rpc.rmi.RmiInvocationHandlerImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -43,19 +44,20 @@ public class MageServer {
         return port;
     }
 
-    public <T> void addOneService(Class<T> iface, Remote impl){
+    public <T> void exportService(Class<T> iface, Object impl){
 
         ifaces.add(iface);
 
         try {
 
-            Remote stub = UnicastRemoteObject.exportObject(impl, 0);
+            RmiInvocationHandler rmiInvocationHandler = new RmiInvocationHandlerImpl(impl);
+            UnicastRemoteObject.exportObject(rmiInvocationHandler, 0);
 
             if (rmiRegistry == null) {
                 init();
             }
 
-            rmiRegistry.rebind(iface.getName(), stub);
+            rmiRegistry.rebind(iface.getName(), rmiInvocationHandler);
 
         } catch (RemoteException e) {
             logger.error("add one service error");
@@ -69,7 +71,9 @@ public class MageServer {
             rmiRegistry = LocateRegistry.createRegistry(port);
 
             logger.info("mage server is running");
+
         } catch (RemoteException e) {
+
             logger.error("init mage server error");
             throw new RuntimeException(e);
         }
