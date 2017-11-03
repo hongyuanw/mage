@@ -38,6 +38,11 @@
             <artifactId>mage-rpc-api</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.yuanwhy.mage</groupId>
+            <artifactId>mage-rpc-rmi</artifactId>
+        </dependency>
+
     </dependencies>
 
 

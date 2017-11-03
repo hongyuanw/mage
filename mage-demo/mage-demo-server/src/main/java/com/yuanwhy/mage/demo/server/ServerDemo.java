@@ -18,8 +18,7 @@ public class ServerDemo {
 
         MageServer mageServer = new MageServer(registry, 1099);
 
-        mageServer.addOneService(HelloService.class, helloService);
-
+        mageServer.exportService(HelloService.class, helloService);
 
 
 
