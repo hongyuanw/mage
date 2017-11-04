@@ -6,7 +6,7 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
-import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Proxy;
 import java.rmi.registry.LocateRegistry;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,9 +24,9 @@ public class MageClient<T> {
 
     private String serviceName;
 
-    private Class iface;
+    private Class<T> iface;
 
-    public MageClient(MageRegistry mageRegistry, String serviceName, Class iface) {
+    public MageClient(MageRegistry mageRegistry, String serviceName, Class<T> iface) {
         this.mageRegistry = mageRegistry;
         this.serviceName = serviceName;
         this.iface = iface;
@@ -58,8 +58,7 @@ public class MageClient<T> {
 
             RmiInvocationHandler rmiInvocationHandler = (RmiInvocationHandler) rmiRegistry.lookup(iface.getName());
 
-            // TODO: 03/11/2017 proxy
-            return null;
+            return (T) Proxy.newProxyInstance(iface.getClassLoader(), new Class[]{iface}, new ClientProxyInvocationHandler(rmiInvocationHandler));
         } catch (Exception e) {
 
             logger.error("connect server refused");
